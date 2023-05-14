@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycling e-waste - Reminie India Pvt. Ltd.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Inter&family=Open+Sans:wght@500&family=Source+Sans+Pro:ital@1&display=swap');
+        *{
+            font-family: 'Source Sans Pro', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+        body{
+            font-size: 1.5rem;
+        }
+        header{
+           position: fixed;
+           background-color: darkslategray;
+            color: white;
+           top: 0;
+           right: 0;
+           width: 100%;
+           height: 10vh;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           padding: 30px 2%;
+           transition: all 0.5s ease;           
+        }
+        .company{
+            font-size: 2.5rem;
+            color: antiquewhite;
+            margin-left: 10px;
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(40, 173, 71), 0 0 5px rgb(7, 88, 54);
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .logo i{
+            margin-right: 4px;
+            font-size: 30px;
+        }
+        .logo:hover{
+            color: greenyellow;
+        }
+        ul{
+            display: flex; margin-left: 1px;
+        }
+        ul a{
+            padding: 5px 0;
+            margin: 0 10px;
+            color: white;
+        }
+        ul a:hover{
+            color: greenyellow ;
+        }
+        ul a.active{
+            color: greenyellow;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+        }
+        .main a{
+            margin-right: 10px;
+            margin-left: 15px; 
+            color: white;
+        }
+        .main a:hover{
+            color: greenyellow;
+        }
+        .user{
+            display: flex;
+            align-items: center;
+        }
+        .user i{
+            margin-right: 7px;
+        }
+        #menu-icon{
+            cursor: pointer;
+            display: none;
+        }
+        .mid{
+            display: flex;
+        }
+        .about{
+            margin-left: 5vh;
+            margin-right: 5vh;
+        }
+        .pic1 img{ 
+            width: 50vw; height: 50vh;
+            margin-left: 52vh;
+            border-radius: 5px;
+        }
+        .topic{
+            font-size: 4rem;
+            font-weight: bolder;
+            margin-top: 10vh;
+            margin-left: 20vh;
+            text-shadow: 2px 2px 5px green;
+            font-family: cursive;
+        }
+        .qoute{
+            margin-top: 5vh;
+            margin-left: 5vh;
+            font-weight: bolder;
+            text-shadow: 1px 1px;
+        }
+
+
+        @media (max-width: 1280px){
+            header{
+                padding: 14px 1%;
+            }
+            ul li{
+            padding: 1px 0;
+            margin: 0 2px;
+        }
+        }
+        @media (max-width: 960px){
+            #menu-icon{
+                display: block;
+            }
+            ul {
+                position: absolute;
+                top: 100%; 
+                right: -100%;
+                width: 200px;
+                height: 20vh;
+                background-color:rgb(179, 194, 156);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                border-radius: 10px;
+            }
+            ul a{
+                display: block;
+                margin: 5px 0;
+                padding: 0 25px;
+            }
+            ul a:hover{
+                color: rgb(94, 8, 36);
+                transform: translateY((5px));
+            }
+            ul a.active{
+                color: rgb(110, 5, 40);
+            }
+            ul.open{
+                right: 2%;
+            }
+            .topic{
+                font-size: 3rem;
+                font-weight: bolder;
+                margin-top: 10vh;
+                margin-left: 30vh;text-shadow: 2px 2px 5px green;
+            }
+            .pic1 img{ 
+                width: 35vw; height: 35vh;
+            margin-left: 30vh;
+        }
+        }
+        @media (max-width:520px) {
+            .pic img{
+                margin-left: 20vh;
+            }
+            .pic1 img{ 
+            margin-top: 40vh;
+            margin-right: 0;
+            margin-left: -100%;
+            width: 50vw; height: 20vh;
+            /* display: block; */
+        }
+        .qoute{
+            margin-left: 20vh;
+        }
+        .about{
+            margin-left: 5vh;
+            margin-right: -20%;
+        }
+            .topic{
+                margin-left: 10vh;
+                margin-right: -19vh;
+            }
+            .company{
+                font-size: 1.5rem;
+                margin-left: -150px;
+                margin-top: 7vh;
+            }
+            .logo{
+            font-size: 20px;
+        }
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <a href="#" class="logo"><i class="fa-solid fa-recycle"></i>E-WASTE RECYCLING <div class="company">REMINIE PVT LTD</div></a>
+
+        
+        <ul class="nav">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <!-- <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li> -->
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="main">
+            <a href="#" class="user"><i class="fa-solid fa-user"></i>Sign In</a>
+            <a href="#">Register</a>
+            <div class="bx bx-menu" id="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        
+    </header>
+    <div class="topic">ELECTRONIC WASTE RECYCLING</div>
+    <div class="qoute">"Help the earth, recycle your tech"</div>
+
+    <div class="mid">
+        <div class="pic"><img src="img/r1.jpeg" alt=""></div>
+       
+        <div class="pic1"><img src="img/R.jpeg" alt=""></div>
+    </div>
+    <div class="about">E-waste recycling is the process of extracting valuable materials after shredding the e-waste into tiny pieces that could be reused in a new electronic appliance. But a number of current challenges are preventing the electronic recycling industry from scaling up. We explore how e-waste recycling is done and why we should focus on scaling it up. </div>
+    
+    
+
+    <script src="https://kit.fontawesome.com/0f0e9c70d9.js" 
+    crossorigin="anonymous"></script>
+    <script>
+        let menu = document.querySelector('#menu-icon');
+        let nav = document.querySelector('.nav');
+
+        menu.addEventListener('click',() => {
+            menu.classList.toggle('bx-x');
+            nav.classList.toggle('open');
+        })
+    </script>
+</body>
+</html>
